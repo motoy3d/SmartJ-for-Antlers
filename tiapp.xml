@@ -2,18 +2,18 @@
 <ti:app xmlns:ti="http://ti.appcelerator.org">
     <id>smartj.antlers</id>
     <name>SmartJ for Antlers</name>
-    <version>1.0.0</version>
+    <version>1.0.2</version>
     <publisher>Motoi Kataoka</publisher>
     <url>http://motoy3d.blogspot.com</url>
     <description>鹿島アントラーズアプリ！</description>
-    <copyright>2014 by Motoi Kataoka</copyright>
+    <copyright>2016 by Motoi Kataoka</copyright>
     <icon>appicon.png</icon>
     <navbar-hidden>true</navbar-hidden>
     <analytics>false</analytics>
-    <guid>535a1b7b-8090-42a8-a72a-ccc6f0fb60c8</guid>
+    <guid>ad7a61de-23df-4eba-9222-c7ff76f2196b</guid>
     <property name="ti.ui.defaultunit" type="string">dp</property>
     <ios>
-        <min-ios-ver>6.0</min-ios-ver>
+        <min-ios-ver>8.0</min-ios-ver>
         <plist>
             <dict>
                 <key>UISupportedInterfaceOrientations~iphone</key>
@@ -45,8 +45,29 @@
         </orientations>
     </iphone>
     <android xmlns:android="http://schemas.android.com/apk/res/android">
-        <manifest android:installLocation="auto" android:versionCode="1" android:versionName="1.0.0">
-            <application android:hardwareAccelerated="false" android:theme="@style/Theme.Titanium"/>
+        <manifest android:installLocation="auto" android:versionCode="2" android:versionName="1.0.1">
+            <application android:hardwareAccelerated="false" android:theme="@style/Theme.Titanium">
+                <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+                <activity
+                    android:configChanges="keyboardHidden|orientation|screenSize"
+                    android:label="@string/app_name"
+                    android:name=".SmartjForAntlersActivity"
+                    android:screenOrientation="portrait" android:theme="@style/Theme.Titanium">
+                    <intent-filter>
+                        <action android:name="android.intent.action.MAIN"/>
+                        <category android:name="android.intent.category.LAUNCHER"/>
+                    </intent-filter>
+                </activity>
+                <activity
+                    android:configChanges="keyboardHidden|orientation|screenSize"
+                    android:name="org.appcelerator.titanium.TiActivity" android:screenOrientation="portrait"/>
+                <activity
+                    android:configChanges="keyboardHidden|orientation|screenSize"
+                    android:name="org.appcelerator.titanium.TiTranslucentActivity"
+                    android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent"/>
+                <activity android:configChanges="screenSize"
+                    android:name="ti.modules.titanium.ui.android.TiPreferencesActivity" android:screenOrientation="portrait"/>
+            </application>
             <uses-sdk android:minSdkVersion="14"/>
             <supports-screens android:anyDensity="false"/>
         </manifest>
@@ -74,5 +95,6 @@
         <target device="mobileweb">false</target>
         <target device="tizen">false</target>
     </deployment-targets>
-    <sdk-version>3.2.3.GA</sdk-version>
+    <sdk-version>5.5.0.GA</sdk-version>
+    <property name="appc-app-id" type="string">57e3bb5868766e9d43b54d14</property>
 </ti:app>
