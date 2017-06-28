@@ -2,7 +2,7 @@
 <ti:app xmlns:ti="http://ti.appcelerator.org">
     <id>smartj.antlers</id>
     <name>SmartJ for Antlers</name>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <publisher>Motoi Kataoka</publisher>
     <url>http://motoy3d.blogspot.com</url>
     <description>鹿島アントラーズアプリ！</description>
@@ -48,34 +48,6 @@
     <android xmlns:android="http://schemas.android.com/apk/res/android"/>
     <!-- Android設定はplatform/android/AndroidManifest.xmlで行う。
     WRITE_EXTERNAL_STORAGEパーミッションを無効化するのがtiapp.xmlではできないため -->
-<!--    <android xmlns:android="http://schemas.android.com/apk/res/android">
-        <manifest android:installLocation="auto" android:versionCode="2" android:versionName="1.0.1">
-            <application android:hardwareAccelerated="false" android:theme="@style/Theme.Titanium">
-                <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
-                <activity
-                    android:configChanges="keyboardHidden|orientation|screenSize"
-                    android:label="@string/app_name"
-                    android:name=".SmartjForAntlersActivity"
-                    android:screenOrientation="portrait" android:theme="@style/Theme.Titanium">
-                    <intent-filter>
-                        <action android:name="android.intent.action.MAIN"/>
-                        <category android:name="android.intent.category.LAUNCHER"/>
-                    </intent-filter>
-                </activity>
-                <activity
-                    android:configChanges="keyboardHidden|orientation|screenSize"
-                    android:name="org.appcelerator.titanium.TiActivity" android:screenOrientation="portrait"/>
-                <activity
-                    android:configChanges="keyboardHidden|orientation|screenSize"
-                    android:name="org.appcelerator.titanium.TiTranslucentActivity"
-                    android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent"/>
-                <activity android:configChanges="screenSize"
-                    android:name="ti.modules.titanium.ui.android.TiPreferencesActivity" android:screenOrientation="portrait"/>
-            </application>
-            <uses-sdk android:minSdkVersion="14"/>
-            <supports-screens android:anyDensity="false"/>
-        </manifest>
-    </android>-->
     <modules>
         <module platform="android">net.nend</module>
         <module platform="iphone">de.marcelpociot.social</module>
@@ -87,6 +59,6 @@
         <target device="iphone">true</target>
         <target device="mobileweb">false</target>
     </deployment-targets>
-    <sdk-version>5.5.1.GA</sdk-version>
+    <sdk-version>6.1.0.GA</sdk-version>
     <property name="appc-app-id" type="string">57e3bb5868766e9d43b54d14</property>
 </ti:app>
